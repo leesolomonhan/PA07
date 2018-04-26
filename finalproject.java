@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import java.util.Scanner;
 
 public class finalproject {
-
+		int value;
         finalproject(){
 
             JFrame frame=new JFrame("Final Project");
@@ -35,7 +35,7 @@ public class finalproject {
                 tab1.add(load);
                 tab1.add(enter);
                 tab1.add(set);
-		tab1.add(sliderWidget);
+                tab1.add(sliderWidget);
                 tabpane.add("Main",tab1);
                 
 				
@@ -69,7 +69,7 @@ public class finalproject {
 			
 			set.addActionListener(new ActionListener() {
  				public void actionPerformed(ActionEvent e){
-  					Slider.set();	
+  					value = sliderWidget.slide.getValue();
 				}
 			});
 
