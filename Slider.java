@@ -30,11 +30,6 @@ public Slider() {
   add("South", end);
 }
 
-public int set(){
-  int values = slide.getValue();
-  value.setText(""+values);
-  return values;
-}
   public void stateChanged(ChangeEvent e) {
     int values = slide.getValue();
     value.setText(""+values);
