@@ -9,14 +9,16 @@ public class Slider extends JFrame
 JSlider slide = new JSlider(0, 9, 0);
 JButton reset = new JButton("Reset");
 JTextField value = new JTextField();
+JButton set = new JButton("Set");
 
 public static void main(String[]args) {
   Slider x = new Slider();
   x.setVisible(true);
+  x.setLocation(450,350);
 }
 public Slider() {
   setLayout(new BorderLayout());
-  setSize(500,200);
+  setSize(500,150);
   setTitle("Value");
   setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -38,6 +40,8 @@ public Slider() {
 
   reset.addActionListener(this);
   end.add(reset);
+  set.addActionListener(this);
+  end.add(set);
   add("South", end);
 }
 
@@ -49,6 +53,10 @@ public void actionPerformed(ActionEvent e){
 private void reset(){
   value.setText("0");
   slide.setValue(0);
+}
+private int set(ChangeEvent e){
+  int value = slide.getValue();
+  return value;
 }
   public void stateChanged(ChangeEvent e) {
     int values = slide.getValue();
