@@ -31,10 +31,11 @@ public class finalproject {
                 Slider sliderWidget = new Slider();
                 JButton load = new JButton("Load File");
                 JButton enter = new JButton("Encryption Level");
-                JButton reset = new JButton("Reset");
+                JButton set = new JButton("Set");
                 tab1.add(load);
                 tab1.add(enter);
-                tab1.add(reset);
+                tab1.add(set);
+		tab1.add(sliderWidget);
                 tabpane.add("Main",tab1);
                 
 				
@@ -66,7 +67,7 @@ public class finalproject {
 				}
 			});
 			
-			reset.addActionListener(new ActionListener() {
+			set.addActionListener(new ActionListener() {
  				public void actionPerformed(ActionEvent e){
   					Slider.set();	
 				}
