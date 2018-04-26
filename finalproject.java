@@ -28,14 +28,13 @@ public class finalproject {
                 //adding it to the tab1
                 tab1.add(datelabel);
                 tab1.add(text);
-                Slider sliderWidget = new Slider();
+         
                 JButton load = new JButton("Load File");
                 JButton enter = new JButton("Encryption Level");
-                JButton set = new JButton("Set");
+   
                 tab1.add(load);
                 tab1.add(enter);
-                tab1.add(set);
-                tab1.add(sliderWidget);
+   
                 tabpane.add("Main",tab1);
                 
 				
@@ -67,11 +66,6 @@ public class finalproject {
 				}
 			});
 			
-			set.addActionListener(new ActionListener() {
- 				public void actionPerformed(ActionEvent e){
-  					value = sliderWidget.slide.getValue();
-				}
-			});
 
             frame.add(tabpane);
             frame.setSize(700,700);
