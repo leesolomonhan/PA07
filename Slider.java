@@ -54,8 +54,4 @@ private void reset(){
     int values = slide.getValue();
     value.setText(""+values);
   }
-  private void reset(){
-    value.setText("0");
-    slide.setValue(0);
-  }
 }
